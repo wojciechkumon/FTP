@@ -2,9 +2,6 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'application'
 apply plugin: 'jacoco'
-//apply plugin: 'checkstyle'
-//apply plugin: 'findbugs'
-//apply plugin: 'pmd'
 
 
 mainClassName = "pl.edu.agh.kis.clientserverftp.launchers.ServerLauncher"
