@@ -1,0 +1,39 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'application'
+apply plugin: 'jacoco'
+//apply plugin: 'checkstyle'
+//apply plugin: 'findbugs'
+//apply plugin: 'pmd'
+
+
+mainClassName = "pl.edu.agh.kis.clientserverftp.launchers.ServerLauncher"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'com.google.guava', name: 'guava', version: '18.0'
+    compile 'com.h2database:h2:1.4.190'
+    testCompile 'junit:junit:4.12',
+            'org.powermock:powermock-core:1.6.1',
+            'org.powermock:powermock-module-junit4:1.6.1',
+            'org.powermock:powermock-api-mockito:1.6.1'
+    compile 'org.apache.commons:commons-lang3:3.4'
+}
+
+task( runClient, dependsOn: jar, type: JavaExec ) {
+    main = "pl.edu.agh.kis.clientserverftp.launchers.ClientLauncher"
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+task( runAdminPanel, dependsOn: jar, type: JavaExec ) {
+    main = "pl.edu.agh.kis.clientserverftp.launchers.ServerAdminPanelLauncher"
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+task( runServer, dependsOn: jar, type: JavaExec ) {
+    main = "pl.edu.agh.kis.clientserverftp.launchers.ServerLauncher"
+    classpath = sourceSets.main.runtimeClasspath
+}

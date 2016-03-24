@@ -1,0 +1,4 @@
+#Server properties
+#Fri Dec 25 13:00:14 CET 2015
+ROOT_PATH=./server_root
+THREAD_POOL_SIZE=100

@@ -1,0 +1,4 @@
+2016-02-03 15:44:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-190]
+2016-02-03 15:44:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-190]
